@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teacher Dashboard - Digital Mental Health</title>
+  <!-- External CSS & JS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body class="dashboard-page">
+
+<!-- ===== Header ===== -->
+<header>
+  <h1>Digital Mental Health - Teacher Dashboard</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/wellness">Wellness</a>
+    <a href="/webcam">Webcam</a>
+  </nav>
+</header>
+
+<!-- ===== Page Title ===== -->
+<div class="page-title">Student Mood Analytics</div>
+
+<!-- ===== Charts Section ===== -->
+<div class="charts">
+  <!-- Bar Chart Card -->
+  <div class="chart-card">
+    <h3>Current Class Mood</h3>
+    <canvas id="barChart" width="300" height="250"></canvas>
+    <button class="refresh-btn" onclick="updateBarChart()">Refresh Data</button>
+  </div>
+
+  <!-- Pie Chart Card -->
+  <div class="chart-card">
+    <h3>Mood Distribution</h3>
+    <canvas id="pieChart" width="300" height="250"></canvas>
+    <button class="refresh-btn" onclick="updatePieChart()">Refresh Data</button>
+  </div>
+
+  <!-- Line Chart Card -->
+  <div class="chart-card">
+    <h3>Weekly Mood Trend</h3>
+    <canvas id="lineChart" width="300" height="250"></canvas>
+    <button class="refresh-btn" onclick="updateLineChart()">Refresh Data</button>
+  </div>
+</div>
+
+<!-- ===== Footer ===== -->
+<footer>
+  &copy; 2025 Digital Mental Health | 
+  <a href="/">Home</a> | 
+  <a href="/wellness">Wellness</a> | 
+  <a href="/webcam">Webcam</a>
+</footer>
+
+</body>
+</html>

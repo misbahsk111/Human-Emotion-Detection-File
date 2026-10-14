@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Wellness Support - Digital Mental Health</title>
+  <!-- External CSS & JS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body class="wellness-page">
+
+<!-- ===== Header ===== -->
+<header>
+  <h1>Digital Mental Health - Wellness</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/webcam">Webcam</a>
+    <a href="/wellness" class="active">Wellness</a>
+  </nav>
+</header>
+
+<!-- ===== Content ===== -->
+<div class="container">
+  <h2>Wellness & Self-Help</h2>
+
+  <ul>
+    <li>Take a 2-minute deep breathing exercise</li>
+    <li>Stay hydrated and stretch your body</li>
+    <li>Talk to a friend or counselor if stressed</li>
+    <li>Maintain a daily mood journal</li>
+    <li>Listen to calming focus music</li>
+  </ul>
+
+  <h3>🌿 Guided Meditation</h3>
+  <iframe src="https://www.youtube.com/embed/inpok4MKVLM" 
+          title="Meditation Video" frameborder="0" allowfullscreen></iframe>
+</div>
+
+</body>
+</html>

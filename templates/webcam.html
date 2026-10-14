@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Webcam Emotion Demo</title>
+  <!-- External CSS & JS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body class="webcam-page">
+
+<!-- ===== Common Navigation Bar ===== -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="/" class="nav-logo">Mental Health System</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/dashboard">Dashboard</a>
+      <a href="/wellness">Wellness</a>
+      <a href="/webcam">Webcam Demo</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h2>Webcam Emotion Demo</h2>
+  <video id="video" autoplay></video>
+  <canvas id="canvas" style="display:none;"></canvas>
+  <button id="snap">📸 Capture Emotion</button>
+  <p id="status" class="Neutral">Detected Emotion: --</p>
+</div>
+
+</body>
+</html>

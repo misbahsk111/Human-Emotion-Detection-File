@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Mental Health Platform</title>
+  <!-- External CSS & JS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body class="index-page">
+
+<!-- ===== Header ===== -->
+<header>
+  <h1>Digital Mental Health</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/wellness">Wellness</a>
+    <a href="/webcam">Webcam</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- ===== Hero Section ===== -->
+<section class="hero">
+  <h2>Support Your Mental Health, Anytime, Anywhere</h2>
+  <p>AI-powered platform for students in higher education to detect stress, receive wellness tips, and get psychological support.</p>
+  <button onclick="document.getElementById('user_text').focus()">Check Your Mood</button>
+</section>
+
+<!-- ===== Emotion Analysis Form ===== -->
+<section class="emotion-form">
+  <textarea id="user_text" rows="5" placeholder="Type how you feel..."></textarea><br>
+  <button id="analyze-btn">Analyze Emotion</button>
+  <div id="emotion-output" class="neutral"></div>
+  <div id="emotion-tip"></div>
+</section>
+
+<!-- ===== Features ===== -->
+<section class="features">
+  <div class="card">
+    <h3>Emotion & Stress Detection</h3>
+    <p>Detect emotions from text, speech, and facial expressions to understand your mental state.</p>
+  </div>
+  <div class="card">
+    <h3>Student Dashboard</h3>
+    <p>Track daily mood, see weekly trends, and get wellness tips and gamified badges.</p>
+  </div>
+  <div class="card">
+    <h3>AI Chatbot Counselor</h3>
+    <p>Anonymous 24x7 support with motivational tips and CBT-style guidance.</p>
+  </div>
+  <div class="card">
+    <h3>Teacher & Counselor Tools</h3>
+    <p>Visualize class mood, get alerts for stressed students, and early intervention reports.</p>
+  </div>
+</section>
+
+<!-- ===== History ===== -->
+<section id="history-section">
+  <h4>Previous Entries:</h4>
+  <ul id="history"></ul>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer id="contact">
+  &copy; 2025 Digital Mental Health | 
+  <a href="#">About</a> | 
+  <a href="#">Privacy</a> | 
+  <a href="#">Contact</a>
+</footer>
+
+</body>
+</html>

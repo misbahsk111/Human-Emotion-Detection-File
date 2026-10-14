@@ -1,0 +1,408 @@
+/* ===================================
+   Global Reset & Defaults
+=================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+body {
+  color: #333;
+  line-height: 1.6;
+  background: #f0f4f8;
+}
+
+/* ===================================
+   Header / Navbar
+=================================== */
+header, .navbar {
+  background: #4b6cb7;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+header h1, .nav-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+nav a, .nav-links a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+nav a:hover, .nav-links a:hover {
+  color: #ffe066;
+  transform: scale(1.05);
+}
+nav a.active, .nav-links a.active {
+  color: #ffe066;
+}
+
+/* ===================================
+   Hero Section (Index Page)
+=================================== */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+.hero h2 {
+  font-size: 42px;
+  color: #1f3c88;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero button {
+  background: #4b6cb7;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.hero button:hover {
+  background: #3a529b;
+}
+
+/* ===================================
+   Emotion Form (Index)
+=================================== */
+.emotion-form {
+  background: white;
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.emotion-form textarea {
+  width: 90%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+  transition: 0.3s;
+}
+.emotion-form textarea:focus {
+  border-color: #4b6cb7;
+  outline: none;
+}
+.emotion-form button {
+  margin-top: 15px;
+  background: #4b6cb7;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.emotion-form button:hover {
+  background: #3a529b;
+}
+#emotion-output {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+#emotion-output.happy { color: #ffcc00; }
+#emotion-output.sad { color: #3366ff; }
+#emotion-output.angry { color: #ff3300; }
+#emotion-output.anxious { color: #ff66cc; }
+#emotion-output.neutral { color: #999; }
+#emotion-tip {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* ===================================
+   Feature Cards (Index)
+=================================== */
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 50px 20px;
+}
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+  margin: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+.card h3 {
+  color: #4b6cb7;
+  margin-bottom: 15px;
+}
+.card p {
+  color: #555;
+  font-size: 15px;
+}
+
+/* ===================================
+   History (Index)
+=================================== */
+#history-section {
+  max-width: 700px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+#history-section h4 {
+  margin-bottom: 15px;
+  color: #1f3c88;
+}
+#history {
+  list-style: none;
+}
+#history li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* ===================================
+   Dashboard (Charts Page)
+=================================== */
+.page-title {
+  text-align: center;
+  margin: 40px 0 20px 0;
+  color: #1f3c88;
+  font-size: 32px;
+}
+.charts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 20px;
+}
+.chart-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 350px;
+  text-align: center;
+}
+.chart-card h3 {
+  color: #4b6cb7;
+  margin-bottom: 15px;
+}
+.refresh-btn {
+  margin-top: 15px;
+  background: #4b6cb7;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.refresh-btn:hover {
+  background: #3a529b;
+  transform: scale(1.05);
+}
+
+/* ===================================
+   Result Page
+=================================== */
+.result-page .container {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 450px;
+  max-width: 90%;
+  margin: 40px auto;
+  animation: fadeIn 1s ease-in-out;
+}
+.result-page h2 {
+  color: #4a47a3;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+.result-page .score {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 12px;
+  display: inline-block;
+  animation: pulse 1.5s infinite;
+}
+.score.Happy { background: #ffe066; color: #333; }
+.score.Sad { background: #74b9ff; color: #fff; }
+.score.Angry { background: #ff6b6b; color: #fff; }
+.score.Anxious { background: #fd79a8; color: #fff; }
+.score.Neutral { background: #dfe6e9; color: #333; }
+
+/* ===================================
+   Wellness Page
+=================================== */
+.wellness-page .container {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  max-width: 750px;
+  width: 90%;
+  text-align: center;
+  margin: 40px auto;
+  animation: fadeIn 1s ease-in-out;
+}
+.wellness-page h2 { color: #1f3c88; margin-bottom: 20px; font-size: 28px; }
+.wellness-page h3 { color: #4b6cb7; margin-top: 30px; margin-bottom: 15px; }
+.wellness-page ul {
+  text-align: left;
+  margin: 20px auto;
+  padding: 0;
+  list-style: none;
+}
+.wellness-page ul li {
+  background: #f1f2f6;
+  padding: 15px 20px;
+  margin: 12px 0;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.wellness-page ul li:hover {
+  background: #dfe6e9;
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+iframe {
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  width: 100%;
+  height: 400px;
+  transition: transform 0.3s ease;
+}
+iframe:hover {
+  transform: scale(1.02);
+}
+
+/* ===================================
+   Webcam Page
+=================================== */
+.webcam-page body { background: linear-gradient(120deg, #89f7fe, #66a6ff); }
+.webcam-page .container {
+  background: #fff;
+  padding: 35px 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  max-width: 450px;
+  width: 100%;
+  margin: 40px auto;
+}
+.webcam-page h2 { color: #34495e; margin-bottom: 25px; font-size: 26px; }
+video, canvas {
+  border: 4px solid #6c5ce7;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+}
+button {
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #6c5ce7;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+button:hover { transform: scale(1.1); background: #341f97; }
+#status {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  animation: pulse 1.5s infinite;
+  min-height: 24px;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+#status.Happy { background: #ffe066; color: #333; }
+#status.Sad { background: #74b9ff; color: #fff; }
+#status.Angry { background: #ff6b6b; color: #fff; }
+#status.Anxious { background: #fd79a8; color: #fff; }
+#status.Neutral { background: #dfe6e9; color: #333; }
+
+/* ===================================
+   Footer
+=================================== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #4b6cb7;
+  color: white;
+  margin-top: 50px;
+}
+footer a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+footer a:hover {
+  color: #ffe066;
+  transform: scale(1.05);
+}
+
+/* ===================================
+   Animations & Responsive
+=================================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+@media(max-width: 800px) {
+  header, .navbar { flex-direction: column; gap: 15px; text-align: center; }
+  .features { flex-direction: column; align-items: center; }
+  iframe { height: 250px; }
+}

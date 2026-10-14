@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Emotion Analysis Result - Digital Mental Health</title>
+  <!-- External CSS & JS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body class="result-page">
+
+<!-- ===== Header ===== -->
+<header>
+  <h1>Digital Mental Health - Result</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/webcam">Webcam</a>
+    <a href="/wellness">Wellness</a>
+  </nav>
+</header>
+
+<!-- ===== Result Content ===== -->
+<div class="container">
+  <h2>Analysis Result</h2>
+  <p><b>Text:</b> {{ text }}</p>
+  <p><b>Detected Emotion:</b> {{ emotion }}</p>
+  <p class="score {{ emotion }}">{{ score }}</p>
+</div>
+
+<!-- ===== Footer ===== -->
+<footer>
+  &copy; 2025 Digital Mental Health |
+  <a href="/">Home</a> |
+  <a href="/dashboard">Dashboard</a> |
+  <a href="/webcam">Webcam</a> |
+  <a href="/wellness">Wellness</a>
+</footer>
+
+</body>
+</html>
